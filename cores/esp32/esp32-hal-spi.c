@@ -195,7 +195,7 @@ void spiAttachSCK(spi_t * spi, int8_t sck)
     pinMatrixOutAttach(sck, SPI_CLK_IDX(spi->num), false, false);
 }
 
-void spiAttachMISO(spi_t * spi, int8_t miso)
+int spiAttachMISO(spi_t * spi, int8_t miso)
 {
     if(!spi) {
         return;
@@ -229,8 +229,12 @@ void spiAttachMISO(spi_t * spi, int8_t miso)
 #endif
     }
     SPI_MUTEX_LOCK();
+    
     pinMode(miso, INPUT);
+    return 1;
+    
     pinMatrixInAttach(miso, SPI_MISO_IDX(spi->num), false);
+
     SPI_MUTEX_UNLOCK();
 }
 
