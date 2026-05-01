@@ -231,10 +231,8 @@ int spiAttachMISO(spi_t * spi, int8_t miso)
     SPI_MUTEX_LOCK();
     
     pinMode(miso, INPUT);
-    return 1;
-    
     pinMatrixInAttach(miso, SPI_MISO_IDX(spi->num), false);
-
+    return 1;
     SPI_MUTEX_UNLOCK();
 }
 
