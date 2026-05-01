@@ -67,7 +67,7 @@ void spiStopBus(spi_t * spi);
 
 //Attach/Detach Signal Pins
 void spiAttachSCK(spi_t * spi, int8_t sck);
-int spiAttachMISO(spi_t * spi, int8_t miso);
+void spiAttachMISO(spi_t * spi, int8_t miso);
 void spiAttachMOSI(spi_t * spi, int8_t mosi);
 void spiDetachSCK(spi_t * spi, int8_t sck);
 void spiDetachMISO(spi_t * spi, int8_t miso);
