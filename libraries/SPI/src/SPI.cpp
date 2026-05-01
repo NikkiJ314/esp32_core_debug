@@ -108,10 +108,10 @@ void SPIClass::begin(int8_t sck, int8_t miso, int8_t mosi, int8_t ss)
     }
 
     spiAttachSCK(_spi, _sck);
-    int check = spiAttachMISO(_spi, _miso);
-    if (check == 1) {
-        Serial.println("wattesigma");
-    }
+    // int check = spiAttachMISO(_spi, _miso);
+    // if (check == 1) {
+    //     Serial.println("wattesigma");
+    // }
     spiAttachMOSI(_spi, _mosi);
 
 }
